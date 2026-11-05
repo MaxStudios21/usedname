@@ -1,92 +1,53 @@
-/* Reset and base styles  */
 * {
-	padding: 0px;
-	margin: 0px;
-	border: none;
+  box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/InterRegular.woff2");
+  font-display: swap;
+  font-weight: 400;
 }
 
-/* Links */
-
-a, a:link, a:visited  {
-    text-decoration: none;
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
 }
 
-a:hover  {
-    text-decoration: none;
+.user-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #2a2f37;
+  border-radius: 20px;
+  padding: 16px 24px 16px 16px;
+  background: #1a1d22;
 }
 
-/* Common */
-
-aside, nav, footer, header, section, main {
-	display: block;
+.user-card__avatar {
+  display: block;
+  border-radius: 100%;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    font-size: inherit;
-	font-weight: inherit;
+.user-card__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #f3f4f6;
+  text-decoration: none;
+  background: #00447c;
+  transition: background 0.3s;
 }
 
-ul, ul li {
-	list-style: none;
-}
-
-img {
-	vertical-align: top;
-}
-
-img, svg {
-	max-width: 100%;
-	height: auto;
-}
-
-address {
-  font-style: normal;
-}
-
-/* Form */
-
-input, textarea, button, select {
-	font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background-color: transparent;
-}
-
-input::-ms-clear {
-	display: none;
-}
-
-textarea {
-	resize: vertical;
-}
-
-button, input[type="submit"] {
-    display: inline-block;
-    box-shadow: none;
-    background-color: transparent;
-    background: none;
-    cursor: pointer;
-}
-
-button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
-}
-
-label {
-	cursor: pointer;
-}
-
-legend {
-	display: block;
-}
-
-input[type='file'] {
-	max-width: 100%;
+.user-card__link:hover {
+  background: #035496;
 }
